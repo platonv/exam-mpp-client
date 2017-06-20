@@ -1,0 +1,11 @@
+<h1>PIZZA SHOP</h1>
+
+<div *ngFor="let pizza of pizzas">
+  <label (click)="goToIngredients(pizza)">{{pizza.name}}</label>
+  <input type="text" [(ngModel)]="pizza.price" />
+  <button *ngIf="pizzas" (click)="update(pizza)">Update</button>
+</div>
+<br><hr><br>
+<label>Price:</label>
+<input [(ngModel)]="price" />
+<button *ngIf="pizzas" (click)="updateAll()">Update All</button>
